@@ -41,19 +41,19 @@ namespace Motate {
 
 #ifdef UART0
 // This is for the Sam4e
-constexpr Uart* const UART0_DONT_CONFLICT = UART0;
+static Uart* const UART0_DONT_CONFLICT = UART0;
 #undef UART0
-constexpr Uart* const UART0 = UART0_DONT_CONFLICT;
+static Uart* const UART0 = UART0_DONT_CONFLICT;
 #define HAS_UART0
 
-constexpr uint16_t const ID_UART0_DONT_CONFLICT = ID_UART0;
+static uint16_t const ID_UART0_DONT_CONFLICT = ID_UART0;
 #undef ID_UART0
-constexpr uint16_t const ID_UART0 = ID_UART0_DONT_CONFLICT;
+static uint16_t const ID_UART0 = ID_UART0_DONT_CONFLICT;
 
 #ifdef PDC_UART0
-constexpr Pdc* const PDC_UART0_DONT_CONFLICT = PDC_UART0;
+static Pdc* const PDC_UART0_DONT_CONFLICT = PDC_UART0;
 #undef PDC_UART0
-constexpr Pdc* const PDC_UART0 = PDC_UART0_DONT_CONFLICT;
+static Pdc* const PDC_UART0 = PDC_UART0_DONT_CONFLICT;
 #define HAS_PDC
 #define HAS_PDC_UART0
 #endif  // PDC_UART0
@@ -62,9 +62,9 @@ constexpr Pdc* const PDC_UART0 = PDC_UART0_DONT_CONFLICT;
 #ifdef UART
 // NOTE: We homogenize, and move the names UART -> UART0
 // This is for the Sam3x
-constexpr Uart* const UART0_DONT_CONFLICT = UART;
+static Uart* const UART0_DONT_CONFLICT = UART;
 #undef UART
-constexpr Uart* const UART0               = UART0_DONT_CONFLICT;
+static Uart* const UART0               = UART0_DONT_CONFLICT;
 #define HAS_UART0
 #define HAD_UART
 
@@ -72,9 +72,9 @@ constexpr uint32_t   ID_UART0                = ID_UART;
 #undef ID_UART
 
 #ifdef PDC_UART
-constexpr Pdc* const PDC_UART0_DONT_CONFLICT = PDC_UART;
+static Pdc* const PDC_UART0_DONT_CONFLICT = PDC_UART;
 #undef PDC_UART
-constexpr Pdc* const PDC_UART0               = PDC_UART0_DONT_CONFLICT;
+static Pdc* const PDC_UART0               = PDC_UART0_DONT_CONFLICT;
 #define HAS_PDC
 #define HAS_PDC_UART0
 
@@ -87,19 +87,19 @@ constexpr IRQn_Type    UART0_IRQn  = UART_IRQn;
 #endif  // ifdef UART0
 
 #ifdef UART1
-constexpr Uart* const UART1_DONT_CONFLICT = UART1;
+static Uart* const UART1_DONT_CONFLICT = UART1;
 #undef UART1
-constexpr Uart* const UART1 = UART1_DONT_CONFLICT;
+static Uart* const UART1 = UART1_DONT_CONFLICT;
 #define HAS_UART1
 
-constexpr uint32_t const ID_UART1_DONT_CONFLICT = ID_UART1;
+static uint32_t const ID_UART1_DONT_CONFLICT = ID_UART1;
 #undef ID_UART1
-constexpr uint32_t const ID_UART1 = ID_UART1_DONT_CONFLICT;
+static uint32_t const ID_UART1 = ID_UART1_DONT_CONFLICT;
 
 #ifdef PDC_UART1
-constexpr Pdc* const PDC_UART1_DONT_CONFLICT = PDC_UART1;
+static Pdc* const PDC_UART1_DONT_CONFLICT = PDC_UART1;
 #undef PDC_UART1
-constexpr Pdc* const PDC_UART1 = PDC_UART1_DONT_CONFLICT;
+static Pdc* const PDC_UART1 = PDC_UART1_DONT_CONFLICT;
 #define HAS_PDC
 #define HAS_PDC_UART1
 #endif  // PDC_UART1
@@ -111,9 +111,9 @@ constexpr IRQn_Type    UART1_IRQn  = (IRQn_Type)0u;
 #endif
 
 #ifdef UART2
-constexpr Uart* const UART2_DONT_CONFLICT = UART2;
+static Uart* const UART2_DONT_CONFLICT = UART2;
 #undef UART2
-constexpr Uart* const UART2 = UART2_DONT_CONFLICT;
+static Uart* const UART2 = UART2_DONT_CONFLICT;
 #define HAS_UART2
 
 constexpr uint32_t const ID_UART2_DONT_CONFLICT = ID_UART2;
@@ -121,9 +121,9 @@ constexpr uint32_t const ID_UART2_DONT_CONFLICT = ID_UART2;
 constexpr uint32_t const ID_UART2 = ID_UART2_DONT_CONFLICT;
 
 #ifdef PDC_UART2
-constexpr Pdc* const PDC_UART2_DONT_CONFLICT = PDC_UART2;
+static Pdc* const PDC_UART2_DONT_CONFLICT = PDC_UART2;
 #undef PDC_UART2
-constexpr Pdc* const PDC_UART2 = PDC_UART2_DONT_CONFLICT;
+static Pdc* const PDC_UART2 = PDC_UART2_DONT_CONFLICT;
 #define HAS_PDC
 #define HAS_PDC_UART2
 #endif  // PDC_UART1
@@ -135,9 +135,9 @@ constexpr IRQn_Type    UART2_IRQn  = (IRQn_Type)0u;
 #endif
 
 #ifdef UART3
-constexpr Uart* const UART3_DONT_CONFLICT = UART3;
+static Uart* const UART3_DONT_CONFLICT = UART3;
 #undef UART3
-constexpr Uart* const UART3 = UART3_DONT_CONFLICT;
+static Uart* const UART3 = UART3_DONT_CONFLICT;
 #define HAS_UART3
 
 constexpr uint32_t const ID_UART3_DONT_CONFLICT = ID_UART3;
@@ -145,9 +145,9 @@ constexpr uint32_t const ID_UART3_DONT_CONFLICT = ID_UART3;
 constexpr uint32_t const ID_UART3 = ID_UART3_DONT_CONFLICT;
 
 #ifdef PDC_UART3
-constexpr Pdc* const PDC_UART3_DONT_CONFLICT = PDC_UART3;
+static Pdc* const PDC_UART3_DONT_CONFLICT = PDC_UART3;
 #undef PDC_UART3
-constexpr Pdc* const PDC_UART3 = PDC_UART3_DONT_CONFLICT;
+static Pdc* const PDC_UART3 = PDC_UART3_DONT_CONFLICT;
 #define HAS_PDC
 #define HAS_PDC_UART3
 #endif  // PDC_UART1
@@ -159,9 +159,9 @@ constexpr IRQn_Type    UART3_IRQn  = (IRQn_Type)0u;
 #endif
 
 #ifdef UART4
-constexpr Uart* const UART4_DONT_CONFLICT = UART4;
+static Uart* const UART4_DONT_CONFLICT = UART4;
 #undef UART4
-constexpr Uart* const UART4 = UART4_DONT_CONFLICT;
+static Uart* const UART4 = UART4_DONT_CONFLICT;
 #define HAS_UART4
 
 constexpr uint32_t const ID_UART4_DONT_CONFLICT = ID_UART4;
@@ -169,9 +169,9 @@ constexpr uint32_t const ID_UART4_DONT_CONFLICT = ID_UART4;
 constexpr uint32_t const ID_UART4 = ID_UART4_DONT_CONFLICT;
 
 #ifdef PDC_UART4
-constexpr Pdc* const PDC_UART4_DONT_CONFLICT = PDC_UART4;
+static Pdc* const PDC_UART4_DONT_CONFLICT = PDC_UART4;
 #undef PDC_UART4
-constexpr Pdc* const PDC_UART4 = PDC_UART4_DONT_CONFLICT;
+static Pdc* const PDC_UART4 = PDC_UART4_DONT_CONFLICT;
 #define HAS_PDC
 #define HAS_PDC_UART4
 #endif  // PDC_UART1
@@ -196,9 +196,9 @@ static constexpr Uart * const uart(uint8_t uartPeripheralNumber) {
 
 #ifdef USART0
 // Thi isn't strictly necessary, but preventative and for consistency.
-constexpr Usart* const USART0_DONT_CONFLICT = USART0;
+static Usart* const USART0_DONT_CONFLICT = USART0;
 #undef USART0
-constexpr Usart* const USART0 = USART0_DONT_CONFLICT;
+static Usart* const USART0 = USART0_DONT_CONFLICT;
 #define HAS_USART0
 
 constexpr uint32_t const ID_USART0_DONT_CONFLICT = ID_USART0;
@@ -207,9 +207,11 @@ constexpr uint32_t const ID_USART0 = ID_USART0_DONT_CONFLICT;
 
 
 #ifdef PDC_USART0
-constexpr Pdc* const PDC_USART0_DONT_CONFLICT = PDC_USART0;
+// constexpr Pdc* const PDC_USART0_DONT_CONFLICT = PDC_USART0;
+static Pdc* const PDC_USART0_DONT_CONFLICT = PDC_USART0;
 #undef PDC_USART0
-constexpr Pdc* const PDC_USART0 = PDC_USART0_DONT_CONFLICT;
+// constexpr Pdc* const PDC_USART0 = PDC_USART0_DONT_CONFLICT;
+static Pdc* const PDC_USART0 = PDC_USART0_DONT_CONFLICT;
 #define HAS_PDC
 #define HAS_PDC_USART0
 #endif  // PDC_USART0
@@ -221,9 +223,9 @@ constexpr IRQn_Type    USART0_IRQn = (IRQn_Type)0u;
 
 #ifdef USART1
 // Thi isn't strictly necessary, but preventative and for consistency.
-constexpr Usart* const USART1_DONT_CONFLICT = USART1;
+static Usart* const USART1_DONT_CONFLICT = USART1;
 #undef USART1
-constexpr Usart* const USART1 = USART1_DONT_CONFLICT;
+static Usart* const USART1 = USART1_DONT_CONFLICT;
 #define HAS_USART1
 
 constexpr uint32_t const ID_USART1_DONT_CONFLICT = ID_USART1;
@@ -232,9 +234,9 @@ constexpr uint32_t const ID_USART1 = ID_USART1_DONT_CONFLICT;
 
 
 #ifdef PDC_USART1
-constexpr Pdc* const PDC_USART1_DONT_CONFLICT = PDC_USART1;
+static Pdc* const PDC_USART1_DONT_CONFLICT = PDC_USART1;
 #undef PDC_USART1
-constexpr Pdc* const PDC_USART1 = PDC_USART1_DONT_CONFLICT;
+static Pdc* const PDC_USART1 = PDC_USART1_DONT_CONFLICT;
 #define HAS_PDC
 #define HAS_PDC_USART1
 #endif  // PDC_UART1
@@ -246,9 +248,9 @@ constexpr IRQn_Type    USART1_IRQn = (IRQn_Type)0u;
 
 #ifdef USART2
 // Thi isn't strictly necessary, but preventative and for consistency.
-constexpr Usart* const USART2_DONT_CONFLICT = USART2;
+static Usart* const USART2_DONT_CONFLICT = USART2;
 #undef USART2
-constexpr Usart* const USART2 = USART2_DONT_CONFLICT;
+static Usart* const USART2 = USART2_DONT_CONFLICT;
 #define HAS_USART2
 
 constexpr uint32_t const ID_USART2_DONT_CONFLICT = ID_USART2;
@@ -257,9 +259,9 @@ constexpr uint32_t const ID_USART2 = ID_USART2_DONT_CONFLICT;
 
 
 #ifdef PDC_USART2
-constexpr Pdc* const PDC_USART2_DONT_CONFLICT = PDC_USART2;
+static Pdc* const PDC_USART2_DONT_CONFLICT = PDC_USART2;
 #undef PDC_USART2
-constexpr Pdc* const PDC_USART2 = PDC_USART2_DONT_CONFLICT;
+static Pdc* const PDC_USART2 = PDC_USART2_DONT_CONFLICT;
 #define HAS_PDC
 #define HAS_PDC_USART2
 #endif  // PDC_UART2
@@ -299,9 +301,9 @@ static constexpr Usart * const usart(const uint8_t uartPeripheralNumber)
 #elif defined(SPI0)
 
     // This is for the Sam3x and SamS70
-    constexpr Spi * const SPI0_DONT_CONFLICT = SPI0;
+    static Spi * const SPI0_DONT_CONFLICT = SPI0;
 #undef SPI0
-    constexpr Spi * const SPI0_Peripheral = SPI0_DONT_CONFLICT;
+    static Spi * const SPI0_Peripheral = SPI0_DONT_CONFLICT;
 
     constexpr uint16_t const ID_SPI0_DONT_CONFLICT = ID_SPI0;
 #undef ID_SPI0
@@ -312,9 +314,9 @@ static constexpr Usart * const usart(const uint8_t uartPeripheralNumber)
 
 #if defined(SPI1)
     // This is for the Sam3x and SamS70
-    constexpr Spi * const SPI1_DONT_CONFLICT = SPI1;
+    static Spi * const SPI1_DONT_CONFLICT = SPI1;
 #undef SPI1
-    constexpr Spi * const SPI1_Peripheral = SPI1_DONT_CONFLICT;
+    static Spi * const SPI1_Peripheral = SPI1_DONT_CONFLICT;
 
     constexpr uint16_t const ID_SPI1_DONT_CONFLICT = ID_SPI1;
 #undef ID_SPI1
